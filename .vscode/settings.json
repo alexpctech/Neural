@@ -1,13 +1,13 @@
 {
-    "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "left",
     "timeline.showView": true,
-    "scm.defaultViewMode": "tree",
     "git.enabled": true,
-    "git.ignoreLimitWarning": true,
+    "workbench.view.scm.visible": true,
+    "workbench.views.explorer.visible": true,
     "workbench.views.timeline": {
         "visible": true,
-        "location": "scm"
+        "location": "explorer"
     },
-    "workbench.view.scm.visible": true
+    "timeline.excludeSources": [],
+    "scm.defaultViewMode": "tree"
 }

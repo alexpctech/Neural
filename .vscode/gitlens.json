@@ -1,0 +1,19 @@
+{
+    "gitlens.views.repositories.location": "explorer",
+    "gitlens.views.fileHistory.location": "explorer",
+    "gitlens.views.lineHistory.location": "explorer",
+    "gitlens.views.compare.location": "explorer",
+    "gitlens.views.search.location": "explorer",
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": true,
+        "suppressCommitNotFoundWarning": true,
+        "suppressFileNotUnderSourceControlWarning": true,
+        "suppressGitVersionWarning": true,
+        "suppressLineUncommittedWarning": true,
+        "suppressNoRepositoryWarning": true
+    },
+    "gitlens.menus": false
+}
