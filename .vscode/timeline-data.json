@@ -1,0 +1,30 @@
+[
+  {
+    "type": "completed",
+    "title": "Base do Sistema ✓",
+    "text": "Estrutura base finalizada",
+    "timestamp": "2025-09-10T00:00:00.000Z",
+    "source": "git"
+  },
+  {
+    "type": "completed",
+    "title": "Sistema de Dados ✓",
+    "text": "Gerenciamento de dados implementado",
+    "timestamp": "2025-09-20T00:00:00.000Z",
+    "source": "git"
+  },
+  {
+    "type": "inProgress",
+    "title": "Frontend Base 🔄",
+    "text": "Em desenvolvimento: Configurações e Temas",
+    "timestamp": "2025-09-25T00:00:00.000Z",
+    "source": "git"
+  },
+  {
+    "type": "pending",
+    "title": "Próxima: Análise Técnica",
+    "text": "Planejado para início em outubro",
+    "timestamp": "2025-10-01T00:00:00.000Z",
+    "source": "git"
+  }
+]

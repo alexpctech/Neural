@@ -1,0 +1,9 @@
+{
+  "sistema": {
+    "versao": "4.0",
+    "nome": "Sistema Trading IA v4.0",
+    "build": "2025-09-24T23:36:17.434858"
+  },
+  "modo_operacao": "SIMULADO",
+  "capital_inicial": 500000
+}

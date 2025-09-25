@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/src/vs/workbench/contrib/timeline/common/timeline.schema.json",
+    "version": "1.0",
+    "name": "Neural Trading - Timeline Oficial",
+    "items": [
+        {
+            "id": "base",
+            "timestamp": "2025-09-10",
+            "title": "✓ Estrutura Base",
+            "description": "Sistema base finalizado",
+            "icon": "pass",
+            "status": "completed",
+            "detail": "• Estrutura modular\n• Ambiente Python\n• Dependências\n• Logging"
+        },
+        {
+            "id": "data",
+            "timestamp": "2025-09-20",
+            "title": "✓ Sistema de Dados",
+            "description": "Sistema de dados finalizado",
+            "icon": "database",
+            "status": "completed",
+            "detail": "• MarketDataManager\n• APIs integradas\n• Cache\n• Análise histórica"
+        },
+        {
+            "id": "frontend",
+            "timestamp": "2025-09-25",
+            "title": "🔄 Frontend [Atual]",
+            "description": "Em desenvolvimento",
+            "icon": "edit",
+            "status": "in-progress",
+            "detail": "Concluído:\n• React/TypeScript\n• Layout base\n• Dashboard inicial\n\nEm Andamento:\n• Componentes de configuração\n• Sistema de temas"
+        },
+        {
+            "id": "tech-analysis",
+            "timestamp": "2025-10-01",
+            "title": "⏳ Análise Técnica",
+            "description": "Próxima fase",
+            "icon": "graph-line",
+            "status": "pending",
+            "detail": "• Indicadores técnicos\n• Detecção de padrões\n• Visualização\n• Backtesting"
+        }
+    ]
+}

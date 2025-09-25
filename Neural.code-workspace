@@ -1,0 +1,25 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "workbench.activityBar.visible": true,
+        "workbench.sideBar.location": "left",
+        "explorer.openEditors.visible": true,
+        "timeline.showView": true,
+        "timeline.showViewInActivityBar": false,
+        "workbench.views.explorer.size": 300,
+        "workbench.view.experimental.timeline.enabled": true,
+        "workbench.views.timeline": {
+            "visible": true,
+            "location": "explorer"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "eamodio.gitlens"
+        ]
+    }
+}

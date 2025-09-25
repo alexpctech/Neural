@@ -1,0 +1,117 @@
+{
+    "apis": {
+        "alpha_vantage": {
+            "nome": "Alpha Vantage",
+            "descricao": "Dados de mercado em tempo real e históricos",
+            "campos": {
+                "api_key": {
+                    "tipo": "string",
+                    "formato": "^[A-Z0-9]{16}$",
+                    "exemplo": "ABC123DEF456GH78",
+                    "obrigatorio": true
+                }
+            },
+            "url_cadastro": "https://www.alphavantage.co/support/#api-key",
+            "plano_gratuito": true,
+            "limites_gratuito": "5 chamadas por minuto, 500 por dia",
+            "formato_validacao": "API validada se retornar status 200 na chamada de teste"
+        },
+        "finnhub": {
+            "nome": "Finnhub",
+            "descricao": "Dados financeiros, notícias e análise de sentimento",
+            "campos": {
+                "api_key": {
+                    "tipo": "string",
+                    "formato": "^[a-z0-9]{48}$",
+                    "exemplo": "c8vqbf2ad3i8edlcgrgg",
+                    "obrigatorio": true
+                }
+            },
+            "url_cadastro": "https://finnhub.io/register",
+            "plano_gratuito": true,
+            "limites_gratuito": "60 chamadas por minuto",
+            "formato_validacao": "API validada se autenticação retornar token válido"
+        },
+        "news_api": {
+            "nome": "News API",
+            "descricao": "Notícias financeiras e análise de sentimento",
+            "campos": {
+                "api_key": {
+                    "tipo": "string",
+                    "formato": "^[a-f0-9]{32}$",
+                    "exemplo": "1234abc5678def9012ghi3456jkl7890",
+                    "obrigatorio": true
+                }
+            },
+            "url_cadastro": "https://newsapi.org/register",
+            "plano_gratuito": true,
+            "limites_gratuito": "100 requisições por dia",
+            "formato_validacao": "API validada se retornar status 200 em chamada de teste"
+        },
+        "openai": {
+            "nome": "OpenAI",
+            "descricao": "Análise de sentimento e processamento de linguagem natural",
+            "campos": {
+                "api_key": {
+                    "tipo": "string",
+                    "formato": "^sk-[A-Za-z0-9]{48}$",
+                    "exemplo": "sk-ABCdef123...",
+                    "obrigatorio": true
+                },
+                "organization_id": {
+                    "tipo": "string",
+                    "formato": "^org-[A-Za-z0-9]{24}$",
+                    "exemplo": "org-ABC123...",
+                    "obrigatorio": false
+                }
+            },
+            "url_cadastro": "https://platform.openai.com/api-keys",
+            "plano_gratuito": false,
+            "formato_validacao": "API validada se autenticação for aceita"
+        },
+        "binance": {
+            "nome": "Binance",
+            "descricao": "Dados de criptomoedas e execução de ordens",
+            "campos": {
+                "api_key": {
+                    "tipo": "string",
+                    "formato": "^[A-Za-z0-9]{64}$",
+                    "exemplo": "YourApiKey...",
+                    "obrigatorio": true
+                },
+                "api_secret": {
+                    "tipo": "string",
+                    "formato": "^[A-Za-z0-9]{64}$",
+                    "exemplo": "YourSecretKey...",
+                    "obrigatorio": true
+                }
+            },
+            "url_cadastro": "https://www.binance.com/pt-BR/support/faq/como-criar-uma-api-key-na-binance-360002502072",
+            "plano_gratuito": true,
+            "limites_gratuito": "1200 requisições por minuto",
+            "formato_validacao": "API validada se autenticação e assinatura forem aceitas"
+        },
+        "iex_cloud": {
+            "nome": "IEX Cloud",
+            "descricao": "Dados fundamentalistas e técnicos do mercado americano",
+            "campos": {
+                "api_key": {
+                    "tipo": "string",
+                    "formato": "^pk_[A-Za-z0-9]{32}$",
+                    "exemplo": "pk_123abc...",
+                    "obrigatorio": true
+                },
+                "secret_key": {
+                    "tipo": "string",
+                    "formato": "^sk_[A-Za-z0-9]{32}$",
+                    "exemplo": "sk_123abc...",
+                    "obrigatorio": false
+                }
+            },
+            "url_cadastro": "https://iexcloud.io/cloud-login#/register",
+            "plano_gratuito": true,
+            "limites_gratuito": "50,000 mensagens por mês",
+            "formato_validacao": "API validada se retornar dados de teste válidos"
+        }
+    }
+}
