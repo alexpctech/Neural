@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Abrir Timeline",
+            "type": "shell",
+            "command": "${command:workbench.action.openEditorAtIndex1}",
+            "problemMatcher": []
+        }
+    ]
+}
