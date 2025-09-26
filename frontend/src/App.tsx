@@ -3,7 +3,6 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline, Container, Box, Typography, Tabs, Tab } from '@mui/material';
 import { ConfiguracaoGeral } from './components/configuracao/ConfiguracaoGeral';
 import { ThemeConfigurator } from './components/configuracao/ThemeConfigurator';
-import TradingChat from './components/configuracao/TradingChat';
 
 // Tema personalizado
 const theme = createTheme({
@@ -85,7 +84,6 @@ function App() {
             <Tabs value={tabValue} onChange={handleTabChange} aria-label="configurações">
               <Tab label="Configuração Geral" />
               <Tab label="Configuração de Tema" />
-              <Tab label="Chat de Suporte" />
             </Tabs>
           </Box>
 
@@ -95,18 +93,6 @@ function App() {
           
           <TabPanel value={tabValue} index={1}>
             <ThemeConfigurator />
-          </TabPanel>
-          
-          <TabPanel value={tabValue} index={2}>
-            <Box sx={{ textAlign: 'center', py: 4 }}>
-              <Typography variant="h6" gutterBottom>
-                Chat de Suporte Implementado
-              </Typography>
-              <Typography color="text.secondary">
-                O sistema de chat com restauração de conversas foi implementado com sucesso!
-                Verifique o componente TradingChat.tsx para mais detalhes.
-              </Typography>
-            </Box>
           </TabPanel>
         </Box>
       </Container>
