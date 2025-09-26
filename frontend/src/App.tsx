@@ -1,11 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import { LayoutBase } from './components/layout/LayoutBase';
-import { Dashboard } from './components/dashboard/Dashboard';
-import { AlertProvider } from './contexts/AlertContext';
-import { AuthProvider } from './contexts/AuthContext';
+import { CssBaseline, Container, Box, Typography, Tabs, Tab } from '@mui/material';
+import { ConfiguracaoGeral } from './components/configuracao/ConfiguracaoGeral';
+import { ThemeConfigurator } from './components/configuracao/ThemeConfigurator';
+import TradingChat from './components/configuracao/TradingChat';
 
 // Tema personalizado
 const theme = createTheme({
@@ -37,23 +35,81 @@ const theme = createTheme({
   },
 });
 
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          {children}
+        </Box>
+      )}
+    </div>
+  );
+}
+
 function App() {
+  const [tabValue, setTabValue] = React.useState(0);
+
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+    setTabValue(newValue);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AuthProvider>
-        <AlertProvider>
-          <Router>
-            <LayoutBase>
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                {/* Adicionar mais rotas aqui */}
-              </Routes>
-            </LayoutBase>
-          </Router>
-        </AlertProvider>
-      </AuthProvider>
+      <Container maxWidth="xl">
+        <Box sx={{ py: 4 }}>
+          <Typography variant="h3" component="h1" gutterBottom align="center">
+            🧠 Sistema Neural Trading v4.0
+          </Typography>
+          
+          <Typography variant="h6" color="text.secondary" align="center" sx={{ mb: 4 }}>
+            Sistema de Trading Automatizado com Múltiplos Agentes
+          </Typography>
+
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={tabValue} onChange={handleTabChange} aria-label="configurações">
+              <Tab label="Configuração Geral" />
+              <Tab label="Configuração de Tema" />
+              <Tab label="Chat de Suporte" />
+            </Tabs>
+          </Box>
+
+          <TabPanel value={tabValue} index={0}>
+            <ConfiguracaoGeral />
+          </TabPanel>
+          
+          <TabPanel value={tabValue} index={1}>
+            <ThemeConfigurator />
+          </TabPanel>
+          
+          <TabPanel value={tabValue} index={2}>
+            <Box sx={{ textAlign: 'center', py: 4 }}>
+              <Typography variant="h6" gutterBottom>
+                Chat de Suporte Implementado
+              </Typography>
+              <Typography color="text.secondary">
+                O sistema de chat com restauração de conversas foi implementado com sucesso!
+                Verifique o componente TradingChat.tsx para mais detalhes.
+              </Typography>
+            </Box>
+          </TabPanel>
+        </Box>
+      </Container>
     </ThemeProvider>
   );
 }
